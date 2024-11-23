@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:merokhet/widgets/custom_button.dart';
+import 'package:merokhet/widgets/custom_title.dart';
+import 'package:merokhet/widgets/logo_widgets.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -98,11 +101,12 @@ class LoginPage extends StatelessWidget {
           style: const TextStyle(
               fontFamily: 'poppins', fontWeight: FontWeight.w400),
           keyboardType: TextInputType.visiblePassword,
+          obscureText: true,
           decoration: InputDecoration(
             hintText: "Password",
             hintStyle: const TextStyle(fontSize: 14, color: Colors.grey),
             filled: true,
-            suffixIcon: const Icon(Icons.password_rounded),
+            suffixIcon: const Icon(Icons.visibility_off_rounded),
             fillColor: Colors.white,
             enabledBorder: border,
             focusedBorder: border,
@@ -115,68 +119,80 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         width: double.infinity,
-        padding: const EdgeInsets.only(top:10),
+        padding: const EdgeInsets.only(top: 10,bottom: 15),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              // margin: const EdgeInsets.only(top: 20, left: 16), // Add margin for spacing
-              child: const Image(
-                image: AssetImage('assets/meroKhetLogo.png'),
-                fit: BoxFit.cover,
-                width: 220,
-                height: 100,
-              ),
-            ),
-            Column(
-              children: [
-                Container(
-                  margin: const EdgeInsets.only(top: 40),
-
-
-                  height: 130,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      const Text(
-                        "Login",
-                        style: TextStyle(
-                            fontSize: 34,
-                            fontFamily: 'poppins',
-                            fontWeight: FontWeight.w600),
-                      ),
-                      const Text("Sign in to your account",
-                          style: TextStyle(
-                              fontFamily: 'poppins',
-                              fontWeight: FontWeight.w400)),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          _google(),
-                          const SizedBox(width: 10),
-                          _facebook(),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                    margin: const EdgeInsets.only(top: 30),
-                    padding: const EdgeInsets.only(top: 0, left: 28, right: 28),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          child: _emailField(),
-                        ),
-                        const SizedBox(height: 14),
-                        Container(child: _passwordField())
-                      ],
-                    )),
-                Text("hi there"),
-              ],
+const LogoWidget(),
+            ///column center
+         Center(
+           child:   Column(
+             children: [
+               Container(
+                 margin: const EdgeInsets.only(top: 20),
+                 height: 130,
+                 child: Column(
+                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                   children: [
+                     const CustomTitle(title: "Sign in", subTitle: "Sign in to your account"),
+                     Row(
+                       mainAxisAlignment: MainAxisAlignment.center,
+                       children: [
+                         _google(),
+                         const SizedBox(width: 10),
+                         _facebook(),
+                       ],
+                     ),
+                   ],
+                 ),
+               ),
+               Container(
+                   margin: const EdgeInsets.only(top: 30),
+                   padding: const EdgeInsets.only(top: 0, left: 28, right: 28),
+                   child: Column(
+                     crossAxisAlignment: CrossAxisAlignment.start,
+                     children: [
+                       Container(
+                         child: _emailField(),
+                       ),
+                       const SizedBox(height: 14),
+                       Container(child: _passwordField()),
+                       const SizedBox(height: 8),
+                       const Row(
+                         mainAxisAlignment: MainAxisAlignment.end,
+                         children: [
+                           Text(
+                             "Forget Password?",
+                             style: TextStyle(
+                                 fontSize: 11,
+                                 fontFamily: 'poppins',
+                                 fontWeight: FontWeight.w400),
+                           )
+                         ],
+                       ),
+                       const SizedBox(
+                         height: 8,
+                       ),
+                      CustomButton(text: "Login", onPressed: (){})
+                     ],
+                   )),
+             ],
+           ),
+         ),
+            const Spacer(),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [Text("New To Platform?",style: TextStyle(
+                fontSize: 12,
+                fontFamily: 'poppins',
+                fontWeight: FontWeight.w400)), Text("Register Now",style: TextStyle(
+        fontSize: 12,
+        fontFamily: 'poppins',
+        fontWeight: FontWeight.w600)),],
             )
           ],
         ),

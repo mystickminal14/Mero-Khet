@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:merokhet/screens/auth/consumer_registration.dart';
 import 'package:merokhet/screens/auth/login_page.dart';
+import 'package:merokhet/screens/home/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +20,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginPage(),
+      home: const HomePage(),
+      routes: {
+        '/login': (context) =>const LoginPage(),
+        '/consumer_registration': (context) =>const ConsumerRegistration(),
+
+      },
     );
   }
 }
