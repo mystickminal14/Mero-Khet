@@ -14,7 +14,6 @@ class ConsumerRegistration extends StatelessWidget {
       ),
       borderRadius: BorderRadius.all(Radius.circular(5)));
 
-
   Widget _google() {
     return OutlinedButton.icon(
       onPressed: () {
@@ -185,7 +184,7 @@ class ConsumerRegistration extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: Container(
         width: double.infinity,
-        padding: const EdgeInsets.only(top: 10, bottom: 15),
+        padding: const EdgeInsets.only(top: 10, bottom: 5),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -195,7 +194,10 @@ class ConsumerRegistration extends StatelessWidget {
             //center
             Column(
               children: [
-              const CustomTitle( title: 'Join Us',subTitle: 'Sign up with',),
+                const CustomTitle(
+                  title: 'Join Us',
+                  subTitle: 'Sign up with',
+                ),
                 const SizedBox(
                   height: 5,
                 ),
@@ -208,45 +210,66 @@ class ConsumerRegistration extends StatelessWidget {
                   ],
                 ),
                 Padding(
-                    padding: const EdgeInsets.only(left:28,right: 28,top:20),
+                    padding:
+                        const EdgeInsets.only(left: 28, right: 28, top: 20),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
                           child: _nameField(),
                         ),
-                       const SizedBox(height: 8,),
+                        const SizedBox(
+                          height: 8,
+                        ),
                         Container(
                           child: _phone(),
                         ),
-                        const SizedBox(height: 8,),
-
+                        const SizedBox(
+                          height: 8,
+                        ),
                         Container(
                           child: _emailField(),
                         ),
-                        const SizedBox(height: 8,),
-
+                        const SizedBox(
+                          height: 8,
+                        ),
                         Container(
                           child: _passwordField(),
                         ),
-                        const SizedBox(height: 12,),
-
-                      CustomButton(text: 'Register', onPressed: (){})
+                        const SizedBox(
+                          height: 12,
+                        ),
+                        CustomButton(text: 'Register', onPressed: () {})
                       ],
                     )),
-
               ],
             ),
             //end of center
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [Text("Already have an account?",style: TextStyle(
-                  fontSize: 12,
-                  fontFamily: 'poppins',
-                  fontWeight: FontWeight.w400)), Text("Login",style: TextStyle(
-                  fontSize: 12,
-                  fontFamily: 'poppins',
-                  fontWeight: FontWeight.w600)),],
+              children: [
+                const Text("Already have an account?",
+                    style: TextStyle(
+                        fontSize: 12,
+                        fontFamily: 'poppins',
+                        fontWeight: FontWeight.w400)),
+                TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/login');
+                  },
+                  style: TextButton.styleFrom(
+                    padding: EdgeInsets.zero,
+                  ),
+                  child: const Text(
+                    "Login",
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontFamily: 'poppins',
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ],
             )
           ],
         ),

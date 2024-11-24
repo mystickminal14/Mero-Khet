@@ -7,22 +7,26 @@ class CustomTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,// Align content to the start
       children: [
-        Text(
-          title,
-          style: const TextStyle(
-            fontSize: 34,
-            fontFamily: 'Poppins',
-            fontWeight: FontWeight.w600,
-          ),
-        ),
+       Container(
+         margin:const EdgeInsets.only(left:0),
+
+         child:  Text(
+           title,
+           style: const TextStyle(
+             fontSize: 34,
+             fontFamily: 'Poppins',
+             fontWeight: FontWeight.w600,
+           ),
+         ),
+       ),
         const SizedBox(
           height: 4, // Add spacing between the two Text widgets
         ),
          Container(
-           // margin:const EdgeInsets.only(left:15),
+           margin:const EdgeInsets.only(left:0),
            child:Text(
              subTitle,
              style: const TextStyle(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:merokhet/screens/auth/consumer_registration.dart';
+import 'package:merokhet/screens/auth/farmer_auth/questionnaire_3.dart';
+import 'package:merokhet/screens/auth/farmer_auth/questionnaire_4.dart';
 import 'package:merokhet/screens/auth/login_page.dart';
 import 'package:merokhet/screens/home/home.dart';
 
@@ -20,10 +22,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const Questionnaire3(),
       routes: {
         '/login': (context) =>const LoginPage(),
         '/consumer_registration': (context) =>const ConsumerRegistration(),
+        '/qna3': (context) =>const Questionnaire3(),
+        '/qna4': (context) =>const Questionnaire4(),
 
       },
     );
