@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:merokhet/widgets/QuestionnaireLayouts/questionnaire_header.dart';
 import 'package:merokhet/widgets/custom_button.dart';
 import 'package:merokhet/widgets/custom_title.dart';
 import 'package:merokhet/widgets/logo_widgets.dart';
@@ -189,7 +190,12 @@ class ConsumerRegistration extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const LogoWidget(),
+            Padding(
+              padding: const EdgeInsets.only(top: 28, left: 18, right: 18),
+              child: QuestionnaireHeader(onPressed: () {
+                Navigator.pushNamed(context, '/home');
+              }),
+            ),
 
             //center
             Column(

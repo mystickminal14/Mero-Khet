@@ -28,7 +28,7 @@ class Questionnaire3 extends StatelessWidget {
               children: [
                 QuestionnaireHeader(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/home');
+                    Navigator.pushNamed(context, '/qna3');
                   },
                 ),
                 const SizedBox(
@@ -78,14 +78,14 @@ class Questionnaire3 extends StatelessWidget {
                   CustomNextButton(
                       text: "Continue",
                       onPressed: () {
-                        Navigator.pushNamed(context, '/4');
+                        Navigator.pushNamed(context, '/qna4');
                       },
                       buttonColor: const Color(0xFF4B6F39)),
                   const SizedBox(height: 10),
                   CustomNextButton(
                       text: "Back",
                       onPressed: () {
-                        Navigator.pushNamed(context, '/home');
+                        Navigator.pushNamed(context, '/qna3');
 
                       },
                       buttonColor: const Color(0xFF4B6F39))

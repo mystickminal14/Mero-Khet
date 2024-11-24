@@ -198,7 +198,7 @@ class LoginPage extends StatelessWidget {
                         fontWeight: FontWeight.w400)),
                 TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/consumer_registration');
+                    Navigator.pushNamed(context, '/home');
                   },
                   style: TextButton.styleFrom(
                     padding: EdgeInsets.zero,

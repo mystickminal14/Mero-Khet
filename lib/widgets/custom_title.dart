@@ -17,7 +17,7 @@ class CustomTitle extends StatelessWidget {
            title,
            style: const TextStyle(
              fontSize: 34,
-             fontFamily: 'Poppins',
+             fontFamily: 'poppins-semi',
              fontWeight: FontWeight.w600,
            ),
          ),
