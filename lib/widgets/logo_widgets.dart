@@ -6,10 +6,7 @@ class LogoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(
-        top: 40,
-        left: 50,
-      ), // Add margin for spacing
+      margin: const EdgeInsets.all(0), // Add margin for spacing
       child: const Image(
         image: AssetImage('assets/meroKhetLogo.png'),
         fit: BoxFit.cover,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:merokhet/widgets/QuestionnaireLayouts/questionnaire_header.dart';
+import 'package:merokhet/widgets/SocialIcons/facebook_icon.dart';
+import 'package:merokhet/widgets/SocialIcons/google_icon.dart';
 import 'package:merokhet/widgets/custom_button.dart';
 import 'package:merokhet/widgets/custom_title.dart';
 import 'package:merokhet/widgets/logo_widgets.dart';
@@ -14,50 +16,6 @@ class ConsumerRegistration extends StatelessWidget {
         strokeAlign: BorderSide.strokeAlignCenter,
       ),
       borderRadius: BorderRadius.all(Radius.circular(5)));
-
-  Widget _google() {
-    return OutlinedButton.icon(
-      onPressed: () {
-        // Add your logic here
-      },
-      icon: const Icon(Icons.facebook), // The icon to be displayed
-      label: const Text("Google",
-          style: TextStyle(
-              color: Colors.black,
-              fontFamily: 'poppins',
-              fontSize: 12,
-              fontWeight: FontWeight.w400)), // The text to be displayed
-      style: OutlinedButton.styleFrom(
-        foregroundColor: Colors.blue,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(5)),
-        ),
-        fixedSize: const Size(150, 32),
-      ),
-    );
-  }
-
-  Widget _facebook() {
-    return OutlinedButton.icon(
-      onPressed: () {
-        // Add your logic here
-      },
-      icon: const Icon(Icons.facebook),
-      label: const Text("Facebook",
-          style: TextStyle(
-              color: Colors.black,
-              fontFamily: 'poppins',
-              fontSize: 12,
-              fontWeight: FontWeight.w400)),
-      style: OutlinedButton.styleFrom(
-        foregroundColor: Colors.blue,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(5)),
-        ),
-        fixedSize: const Size(150, 32),
-      ),
-    );
-  }
 
   Widget _nameField() {
     return Column(
@@ -210,9 +168,9 @@ class ConsumerRegistration extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    _google(),
+                    CustomGoogleIcon(onPressed: () {}),
                     const SizedBox(width: 10),
-                    _facebook(),
+                    CustomFacebookIcon(onPressed: () {}),
                   ],
                 ),
                 Padding(

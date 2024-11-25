@@ -1,4 +1,6 @@
 ﻿import 'package:flutter/material.dart';
+import 'package:merokhet/widgets/SocialIcons/facebook_icon.dart';
+import 'package:merokhet/widgets/SocialIcons/google_icon.dart';
 import 'package:merokhet/widgets/custom_button.dart';
 import 'package:merokhet/widgets/custom_title.dart';
 import 'package:merokhet/widgets/logo_widgets.dart';
@@ -14,49 +16,7 @@ class LoginPage extends StatelessWidget {
       ),
       borderRadius: BorderRadius.all(Radius.circular(5)));
 
-  Widget _google() {
-    return OutlinedButton.icon(
-      onPressed: () {
-        // Add your logic here
-      },
-      icon: const Icon(Icons.facebook), // The icon to be displayed
-      label: const Text("Google",
-          style: TextStyle(
-              color: Colors.black,
-              fontFamily: 'poppins',
-              fontSize: 12,
-              fontWeight: FontWeight.w400)), // The text to be displayed
-      style: OutlinedButton.styleFrom(
-        foregroundColor: Colors.blue,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(5)),
-        ),
-        fixedSize: const Size(150, 32),
-      ),
-    );
-  }
 
-  Widget _facebook() {
-    return OutlinedButton.icon(
-      onPressed: () {
-        // Add your logic here
-      },
-      icon: const Icon(Icons.facebook),
-      label: const Text("Facebook",
-          style: TextStyle(
-              color: Colors.black,
-              fontFamily: 'poppins',
-              fontSize: 12,
-              fontWeight: FontWeight.w400)),
-      style: OutlinedButton.styleFrom(
-        foregroundColor: Colors.blue,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(5)),
-        ),
-        fixedSize: const Size(150, 32),
-      ),
-    );
-  }
 
   Widget _emailField() {
     return Column(
@@ -127,7 +87,12 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const LogoWidget(),
+            const Padding(
+                padding: EdgeInsets.only(top: 40, left: 20),
+                child: LogoWidget()),
+            const SizedBox(
+              height: 10,
+            ),
 
             ///column center
             Center(
@@ -145,9 +110,9 @@ class LoginPage extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            _google(),
+                            CustomGoogleIcon(onPressed:(){}),
                             const SizedBox(width: 10),
-                            _facebook(),
+                            CustomFacebookIcon(onPressed: (){}),
                           ],
                         ),
                       ],
@@ -188,10 +153,10 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             const Spacer(),
-             Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-               const Text("New To Platform?",
+                const Text("New To Platform?",
                     style: TextStyle(
                         fontSize: 12,
                         fontFamily: 'poppins',

@@ -19,60 +19,59 @@ class Questionnaire3 extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Container(
-          padding: const EdgeInsets.only(left: 20, right: 15,bottom:10),
+          padding: const EdgeInsets.only(left: 20, right: 15, bottom: 10),
           width: double.infinity,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-            Column(
-              children: [
-                QuestionnaireHeader(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/qna3');
-                  },
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                Column(
-                  children: [
-                    Questions(
-                      title: title,
-                      question: qna,
-                      ans: ans,
-                    ),
-                    const SizedBox(
-                      height: 25,
-                    ),
-                    CustomCheckbox(
-                      title: 'Fresh Vegetables',
-                      icon: Icons.grain,
-                      initialValue: false,
-                      onChanged: (bool? value) {},
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    CustomCheckbox(
-                      title: 'Fresh Fruits',
-                      icon: Icons.local_florist,
-                      initialValue: false,
-                      onChanged: (bool? value) {},
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    CustomCheckbox(
-                      title: 'Dairy Products',
-                      icon: Icons.local_drink,
-                      initialValue: false,
-                      onChanged: (bool? value) {},
-                    ),
-
-                  ],
-                ),
-              ],
-            ),
+              Column(
+                children: [
+                  QuestionnaireHeader(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/qna3');
+                    },
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Column(
+                    children: [
+                      Questions(
+                        title: title,
+                        question: qna,
+                        ans: ans,
+                      ),
+                      const SizedBox(
+                        height: 25,
+                      ),
+                      CustomCheckbox(
+                        title: 'Fresh Vegetables',
+                        icon: Icons.grain,
+                        initialValue: false,
+                        onChanged: (bool? value) {},
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      CustomCheckbox(
+                        title: 'Fresh Fruits',
+                        icon: Icons.local_florist,
+                        initialValue: false,
+                        onChanged: (bool? value) {},
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      CustomCheckbox(
+                        title: 'Dairy Products',
+                        icon: Icons.local_drink,
+                        initialValue: false,
+                        onChanged: (bool? value) {},
+                      ),
+                    ],
+                  ),
+                ],
+              ),
               Column(
                 children: [
                   CustomNextButton(
@@ -85,14 +84,13 @@ class Questionnaire3 extends StatelessWidget {
                   CustomNextButton(
                       text: "Back",
                       onPressed: () {
-                        Navigator.pushNamed(context, '/qna3');
+                        Navigator.pushNamed(context, '/home');
 
                       },
                       buttonColor: const Color(0xFF4B6F39))
                 ],
               )
             ],
-
           ),
         ),
       ),

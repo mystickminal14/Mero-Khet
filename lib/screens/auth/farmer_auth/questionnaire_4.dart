@@ -5,7 +5,7 @@ import 'package:merokhet/widgets/QuestionnaireLayouts/questionnaire_header.dart'
 import 'package:merokhet/widgets/QuestionnaireLayouts/questions.dart';
 
 class Questionnaire4 extends StatelessWidget {
-  final String title="Product Focus?";
+  final String title="Product Focus";
   final String question="Are your products organic or non-organic?";
   final String ans="How will you package your products? This helps with quality and eco-friendly options";
 
@@ -75,7 +75,7 @@ class Questionnaire4 extends StatelessWidget {
                     CustomNextButton(
                         text: "Continue",
                         onPressed: () {
-                          Navigator.pushNamed(context, '/consumer_register');
+                          Navigator.pushNamed(context, '/consumer_registration');
 
                         },
                         buttonColor: const Color(0xFF4B6F39)),
@@ -83,7 +83,7 @@ class Questionnaire4 extends StatelessWidget {
                     CustomNextButton(
                         text: "Back",
                         onPressed: () {
-                          Navigator.pushNamed(context, '/qna4');
+                          Navigator.pushNamed(context, '/qna3');
 
                         },
                         buttonColor: const Color(0xFF4B6F39))
