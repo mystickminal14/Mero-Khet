@@ -4,7 +4,6 @@ import 'package:merokhet/widgets/SocialIcons/facebook_icon.dart';
 import 'package:merokhet/widgets/SocialIcons/google_icon.dart';
 import 'package:merokhet/widgets/custom_button.dart';
 import 'package:merokhet/widgets/custom_title.dart';
-import 'package:merokhet/widgets/logo_widgets.dart';
 
 class ConsumerRegistration extends StatefulWidget {
   const ConsumerRegistration({super.key});
@@ -140,6 +139,7 @@ class _ConsumerRegistrationState extends State<ConsumerRegistration> {
       ],
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -178,7 +178,7 @@ class _ConsumerRegistrationState extends State<ConsumerRegistration> {
                 ),
                 Padding(
                     padding:
-                    const EdgeInsets.only(left: 28, right: 28, top: 20),
+                        const EdgeInsets.only(left: 28, right: 28, top: 20),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -244,4 +244,3 @@ class _ConsumerRegistrationState extends State<ConsumerRegistration> {
     );
   }
 }
-

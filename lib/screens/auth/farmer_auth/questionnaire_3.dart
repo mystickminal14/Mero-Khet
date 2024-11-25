@@ -3,19 +3,16 @@ import 'package:merokhet/widgets/QuestionnaireLayouts/CustomCheckBox.dart';
 import 'package:merokhet/widgets/QuestionnaireLayouts/custom_next_button.dart';
 import 'package:merokhet/widgets/QuestionnaireLayouts/questionnaire_header.dart';
 import 'package:merokhet/widgets/QuestionnaireLayouts/questions.dart';
-import 'package:merokhet/widgets/logo_widgets.dart';
 
 class Questionnaire3 extends StatefulWidget {
   const Questionnaire3({super.key});
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
-   return Questionnaire3state();
+    return Questionnaire3state();
   }
-
-
 }
-class Questionnaire3state extends State<Questionnaire3>{
+
+class Questionnaire3state extends State<Questionnaire3> {
   final ans =
       "Please select the type of products you plan to offer. This helps us categorize your business and showcase it to the right customers";
   final title = "Product Focus";
@@ -94,7 +91,6 @@ class Questionnaire3state extends State<Questionnaire3>{
                       text: "Back",
                       onPressed: () {
                         Navigator.pushNamed(context, '/home');
-
                       },
                       buttonColor: const Color(0xFF4B6F39))
                 ],
@@ -105,5 +101,4 @@ class Questionnaire3state extends State<Questionnaire3>{
       ),
     );
   }
-
 }

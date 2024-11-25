@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:merokhet/widgets/QuestionnaireLayouts/questionnaire_header.dart';
 import 'package:merokhet/widgets/custom_button.dart';
 import 'package:merokhet/widgets/icon_row_text.dart';
-import 'package:merokhet/widgets/logo_widgets.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -19,9 +18,9 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-               QuestionnaireHeader(onPressed: (){
-                 Navigator.pushNamed(context,'/login');
-               }),
+                QuestionnaireHeader(onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                }),
                 Container(
                   margin: const EdgeInsets.only(
                     top: 0,
