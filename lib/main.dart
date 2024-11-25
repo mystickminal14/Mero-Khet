@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:merokhet/screens/auth/consumer_registration.dart';
+import 'package:merokhet/screens/auth/farmer_auth/farmer_registration_page.dart';
+import 'package:merokhet/screens/auth/farmer_auth/farmer_verification_page.dart';
 import 'package:merokhet/screens/auth/farmer_auth/questionnaire_3.dart';
 import 'package:merokhet/screens/auth/farmer_auth/questionnaire_4.dart';
 import 'package:merokhet/screens/auth/login_page.dart';
@@ -23,13 +25,14 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const LoginPage(),
+      home: const FarmerVerificationPage(),
       routes: {
         '/login': (context) =>const LoginPage(),
         '/consumer_registration': (context) =>const ConsumerRegistration(),
         '/qna3': (context) =>const Questionnaire3(),
         '/qna4': (context) =>const Questionnaire4(),
         '/home': (context) =>const HomePage(),
+        '/farmer_register':(context)=>const FarmerRegistrationPage()
 
       },
     );

@@ -88,7 +88,7 @@ import 'package:merokhet/widgets/QuestionnaireLayouts/questions.dart';
                      CustomNextButton(
                          text: "Back",
                          onPressed: () {
-                           Navigator.pushNamed(context, '/qna3');
+                           Navigator.pushNamed(context, '/farmer_register');
 
                          },
                          buttonColor: const Color(0xFF4B6F39))

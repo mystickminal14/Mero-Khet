@@ -143,8 +143,8 @@ class _ConsumerRegistrationState extends State<ConsumerRegistration> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
-      body: Container(
+      body:SingleChildScrollView(child:
+      Container(
         width: double.infinity,
         padding: const EdgeInsets.only(top: 10, bottom: 5),
         child: Column(
@@ -240,7 +240,7 @@ class _ConsumerRegistrationState extends State<ConsumerRegistration> {
             )
           ],
         ),
-      ),
+      ),),
     );
   }
 }
