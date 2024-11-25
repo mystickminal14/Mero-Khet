@@ -58,7 +58,7 @@ class Questionnaire1state extends State<Questionnaire1> {
                         height: 15,
                       ),
                       CustomCheckbox(
-                        title: 'I already have an existing business',
+                        title: 'I already have a business',
                         icon: Icons.business,
                         initialValue: false,
                         onChanged: (bool? value) {},

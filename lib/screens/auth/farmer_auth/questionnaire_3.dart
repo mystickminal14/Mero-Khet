@@ -89,7 +89,7 @@ class Questionnaire3state extends State<Questionnaire3> {
                   CustomNextButton(
                       text: "Back",
                       onPressed: () {
-                        Navigator.pushNamed(context, '/home');
+                        Navigator.pushNamed(context, '/qna2');
                       },
                       buttonColor: const Color(0xFF4B6F39))
                 ],

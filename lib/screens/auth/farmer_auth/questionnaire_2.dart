@@ -58,7 +58,7 @@ class Questionnaire2state extends State<Questionnaire2> {
                         height: 15,
                       ),
                       CustomCheckbox(
-                        title: 'I already have an existing business',
+                        title: 'No, I represent a business',
                         icon: Icons.business_center,
                         initialValue: false,
                         onChanged: (bool? value) {},
@@ -82,7 +82,7 @@ class Questionnaire2state extends State<Questionnaire2> {
                   CustomNextButton(
                       text: "Back",
                       onPressed: () {
-                        Navigator.pushNamed(context, '/home');
+                        Navigator.pushNamed(context, '/qna1');
                       },
                       buttonColor: const Color(0xFF4B6F39))
                 ],

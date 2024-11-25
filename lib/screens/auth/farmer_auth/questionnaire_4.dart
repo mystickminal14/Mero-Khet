@@ -80,8 +80,7 @@ class _Questionnaire4State extends State<Questionnaire4> {
                     CustomNextButton(
                         text: "Continue",
                         onPressed: () {
-                          Navigator.pushNamed(
-                              context, '/consumer_registration');
+                          Navigator.pushNamed(context, '/qna5');
                         },
                         buttonColor: const Color(0xFF4B6F39)),
                     const SizedBox(height: 10),

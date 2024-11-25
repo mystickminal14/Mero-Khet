@@ -4,6 +4,8 @@ import 'package:merokhet/screens/auth/farmer_auth/questionnaire_1.dart';
 import 'package:merokhet/screens/auth/farmer_auth/questionnaire_2.dart';
 import 'package:merokhet/screens/auth/farmer_auth/questionnaire_3.dart';
 import 'package:merokhet/screens/auth/farmer_auth/questionnaire_4.dart';
+import 'package:merokhet/screens/auth/farmer_auth/questionnaire_5.dart';
+import 'package:merokhet/screens/auth/farmer_auth/questionnaire_6.dart';
 import 'package:merokhet/screens/auth/login_page.dart';
 import 'package:merokhet/screens/flashing_page.dart';
 import 'package:merokhet/screens/home/home.dart';
@@ -33,6 +35,8 @@ class MyApp extends StatelessWidget {
         '/qna2': (context) => const Questionnaire2(),
         '/qna3': (context) => const Questionnaire3(),
         '/qna4': (context) => const Questionnaire4(),
+        '/qna5': (context) => const Questionnaire5(),
+        '/qna6': (context) => const Questionnaire6(),
         '/home': (context) => const HomePage(),
       },
     );
