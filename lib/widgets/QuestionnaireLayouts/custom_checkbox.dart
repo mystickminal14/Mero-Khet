@@ -37,7 +37,7 @@ class _CustomCheckboxState extends State<CustomCheckbox> {
         widget.onChanged(_isChecked);
       },
       child: Container(
-        padding:const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
           border: Border.all(color: Colors.grey),
           borderRadius: BorderRadius.circular(8),

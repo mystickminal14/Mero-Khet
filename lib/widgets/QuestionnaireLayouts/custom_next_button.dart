@@ -4,7 +4,11 @@ class CustomNextButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
   final Color buttonColor;
-  const CustomNextButton({super.key, required this.text, required this.onPressed, required this.buttonColor});
+  const CustomNextButton(
+      {super.key,
+      required this.text,
+      required this.onPressed,
+      required this.buttonColor});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +30,7 @@ class CustomNextButton extends StatelessWidget {
         text,
         style: const TextStyle(
           fontSize: 16,
-          color:Colors.white,
+          color: Colors.white,
           fontFamily: 'poppins',
           fontWeight: FontWeight.w400,
         ),

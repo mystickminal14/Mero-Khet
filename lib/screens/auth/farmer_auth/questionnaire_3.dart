@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:merokhet/widgets/QuestionnaireLayouts/CustomCheckBox.dart';
+import 'package:merokhet/widgets/QuestionnaireLayouts/custom_checkbox.dart';
 import 'package:merokhet/widgets/QuestionnaireLayouts/custom_next_button.dart';
 import 'package:merokhet/widgets/QuestionnaireLayouts/questionnaire_header.dart';
 import 'package:merokhet/widgets/QuestionnaireLayouts/questions.dart';
@@ -20,7 +20,6 @@ class Questionnaire3state extends State<Questionnaire3> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: SafeArea(

@@ -7,7 +7,6 @@ import 'package:merokhet/widgets/logo_widgets.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
-
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
