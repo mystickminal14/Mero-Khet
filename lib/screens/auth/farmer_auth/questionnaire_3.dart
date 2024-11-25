@@ -5,9 +5,17 @@ import 'package:merokhet/widgets/QuestionnaireLayouts/questionnaire_header.dart'
 import 'package:merokhet/widgets/QuestionnaireLayouts/questions.dart';
 import 'package:merokhet/widgets/logo_widgets.dart';
 
-class Questionnaire3 extends StatelessWidget {
+class Questionnaire3 extends StatefulWidget {
   const Questionnaire3({super.key});
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+   return Questionnaire3state();
+  }
 
+
+}
+class Questionnaire3state extends State<Questionnaire3>{
   final ans =
       "Please select the type of products you plan to offer. This helps us categorize your business and showcase it to the right customers";
   final title = "Product Focus";
@@ -15,6 +23,7 @@ class Questionnaire3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: SafeArea(
@@ -96,4 +105,5 @@ class Questionnaire3 extends StatelessWidget {
       ),
     );
   }
+
 }

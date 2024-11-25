@@ -6,8 +6,14 @@ import 'package:merokhet/widgets/custom_button.dart';
 import 'package:merokhet/widgets/custom_title.dart';
 import 'package:merokhet/widgets/logo_widgets.dart';
 
-class ConsumerRegistration extends StatelessWidget {
+class ConsumerRegistration extends StatefulWidget {
   const ConsumerRegistration({super.key});
+
+  @override
+  State<ConsumerRegistration> createState() => _ConsumerRegistrationState();
+}
+
+class _ConsumerRegistrationState extends State<ConsumerRegistration> {
   final border = const OutlineInputBorder(
       borderSide: BorderSide(
         width: 1.5,
@@ -134,9 +140,6 @@ class ConsumerRegistration extends StatelessWidget {
       ],
     );
   }
-
-  //main app
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -175,7 +178,7 @@ class ConsumerRegistration extends StatelessWidget {
                 ),
                 Padding(
                     padding:
-                        const EdgeInsets.only(left: 28, right: 28, top: 20),
+                    const EdgeInsets.only(left: 28, right: 28, top: 20),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -241,3 +244,4 @@ class ConsumerRegistration extends StatelessWidget {
     );
   }
 }
+

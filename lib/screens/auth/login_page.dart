@@ -5,8 +5,14 @@ import 'package:merokhet/widgets/custom_button.dart';
 import 'package:merokhet/widgets/custom_title.dart';
 import 'package:merokhet/widgets/logo_widgets.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   final border = const OutlineInputBorder(
       borderSide: BorderSide(
         width: 1.5,
@@ -15,8 +21,6 @@ class LoginPage extends StatelessWidget {
         strokeAlign: BorderSide.strokeAlignCenter,
       ),
       borderRadius: BorderRadius.all(Radius.circular(5)));
-
-
 
   Widget _emailField() {
     return Column(
@@ -110,9 +114,9 @@ class LoginPage extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            CustomGoogleIcon(onPressed:(){}),
+                            CustomGoogleIcon(onPressed: () {}),
                             const SizedBox(width: 10),
-                            CustomFacebookIcon(onPressed: (){}),
+                            CustomFacebookIcon(onPressed: () {}),
                           ],
                         ),
                       ],
