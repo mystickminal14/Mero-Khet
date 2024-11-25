@@ -1,0 +1,96 @@
+import 'package:flutter/material.dart';
+import 'package:merokhet/widgets/QuestionnaireLayouts/custom_checkbox.dart';
+import 'package:merokhet/widgets/QuestionnaireLayouts/custom_next_button.dart';
+import 'package:merokhet/widgets/QuestionnaireLayouts/questionnaire_header.dart';
+import 'package:merokhet/widgets/QuestionnaireLayouts/questions.dart';
+
+class Questionnaire2 extends StatefulWidget {
+  const Questionnaire2({super.key});
+  @override
+  State<StatefulWidget> createState() {
+    return Questionnaire2state();
+  }
+}
+
+class Questionnaire2state extends State<Questionnaire2> {
+  final ans = "";
+  final title = "Business";
+  final qna = "Are you a farmer or do you represent a business?";
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      body: SafeArea(
+        child: Container(
+          padding: const EdgeInsets.only(left: 20, right: 15, bottom: 10),
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                children: [
+                  QuestionnaireHeader(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/qna3');
+                    },
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Column(
+                    children: [
+                      Questions(
+                        title: title,
+                        question: qna,
+                        ans: ans,
+                      ),
+                      const SizedBox(
+                        height: 25,
+                      ),
+                      CustomCheckbox(
+                        title: 'Yes, I’m a farmer',
+                        icon: Icons.people,
+                        initialValue: false,
+                        onChanged: (bool? value) {},
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      CustomCheckbox(
+                        title: 'I already have an existing business',
+                        icon: Icons.business_center,
+                        initialValue: false,
+                        onChanged: (bool? value) {},
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  CustomNextButton(
+                      text: "Continue",
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/qna3');
+                      },
+                      buttonColor: const Color(0xFF4B6F39)),
+                  const SizedBox(height: 10),
+                  CustomNextButton(
+                      text: "Back",
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/home');
+                      },
+                      buttonColor: const Color(0xFF4B6F39))
+                ],
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

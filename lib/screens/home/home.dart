@@ -84,7 +84,7 @@ class HomePage extends StatelessWidget {
                     CustomButton(
                       text: "Join the Marketplace",
                       onPressed: () {
-                        Navigator.pushNamed(context, '/qna3');
+                        Navigator.pushNamed(context, '/qna1');
                       },
                     ),
                     const SizedBox(

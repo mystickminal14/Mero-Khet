@@ -159,7 +159,7 @@ class _LoginPageState extends State<LoginPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text("New To Platform?",
+                const Text("New To Platform? ",
                     style: TextStyle(
                         fontSize: 12,
                         fontFamily: 'poppins',
